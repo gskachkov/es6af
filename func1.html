@@ -2,7 +2,7 @@
   <script>
     var f = function fes6ArrowFunction(cl) {
       alert(cl('test'));
-    };
+    }.bind(this);
     f(function (x) { return x + 'arrow-function';});
   </script>
 </head>

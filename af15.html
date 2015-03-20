@@ -1,0 +1,17 @@
+<head>
+  <script>
+    function Person(){
+      this.age = 0;
+
+      var fc = () => { this.age++;alert(this.age); };
+
+      setTimeout(fc, 1000);
+    }
+
+    var p = new Person();
+  </script>
+</head>
+<body>
+  <div>Bound this</div>
+  <p>AF tests</p>
+</body>

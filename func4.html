@@ -1,0 +1,23 @@
+<head>
+  <script>
+    var f_wrapper = function (text) {
+        this.text = text;
+
+        var f_inner = function ()  {
+          alert(this.text);
+        }.bind(this);
+
+        this.func = function () {
+          return f_inner;
+        }
+    };
+
+    var f = new f_wrapper('newtext');
+    var f_i = f.func();
+    f_i();
+  </script>
+</head>
+<body>
+  <div>func4.html</div>
+  <p>function chack how works bind</p>
+</body>
