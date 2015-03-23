@@ -1,11 +1,12 @@
 <head>
   <script>
   try {
-    alert('SSS');
-    (function fes6ArrowFunction(text) {
+    alert('SSS1');
+    var f = function fes6ArrowFunction(text) {
       var f = a => a + " arrow-function #1";
       alert(f(text));
-    })('test');
+    };
+    f('test');
   } catch (e) {
     alert(e.message);
   }
