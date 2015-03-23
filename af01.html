@@ -1,9 +1,14 @@
 <head>
   <script>
+  try {
     (function fes6ArrowFunction(text) {
-      var f = a => a + " arrow-function #1", x;
+      var f = a => a + " arrow-function #1";
+      alert(typeof f);
       alert(f(text));
     })('test');
+  } catch (e) {
+    alert(e.message);
+  }
   </script>
 </head>
 <body>
