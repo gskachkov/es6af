@@ -1,0 +1,19 @@
+<head>
+  <script>
+  var A = class A { };
+  var B = class B extends A {
+    constructor() {
+      var f = () => this;
+      alert(f());
+      super();
+    }
+  };
+
+  var c = new B();
+
+  </script>
+</head>
+<body>
+  <div>Bound this</div>
+  <p>AF tests</p>
+</body>

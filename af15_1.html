@@ -1,0 +1,28 @@
+<head>
+  <script>
+    var afObjLexBind2 = function () {
+      this.func = () => this;
+    };
+
+    var afObjLexBind2Instance = new afObjLexBind2();
+    alert(afObjLexBind2Instance.func() === afObjLexBind2Instance);
+
+    var obj = {
+      method: function () {
+        return () => this;
+      }
+    };
+
+    alert(obj.method()() === obj);
+
+    var fake = {steal: obj.method()};
+    alert(fake.steal() === obj);
+
+    var real = {borrow: obj.method};
+    alert(real.borrow()() === real);
+  </script>
+</head>
+<body>
+  <div>Bound this</div>
+  <p>AF tests</p>
+</body>
