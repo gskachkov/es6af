@@ -1,7 +1,8 @@
 <head>
   <script>
   var f = ()=>{'use strict'; return this;};
-  alert(f()===window);
+  var r = f()===window;
+  alert('Result S1' + r);
 
   var d = {
   x : "bar",
@@ -9,8 +10,8 @@
 };
 
 var e = { x : "baz" };
-
- alert(d.y().bind(e, 'ley')()==='barley');
+var r2 = d.y().bind(e, 'ley')()==='barley';
+ alert('Result S1' + r2);
   </script>
 </head>
 <body>
