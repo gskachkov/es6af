@@ -2,6 +2,15 @@
   <script>
   var f = ()=>{'use strict'; return this;};
   alert(f()===window);
+
+  var d = {
+  x : "bar",
+  y : function() { return z => this.x + z; }
+};
+
+var e = { x : "baz" };
+
+ alert(d.y().bind(e, 'ley')()==='barley');
   </script>
 </head>
 <body>
