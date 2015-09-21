@@ -1,7 +1,9 @@
 <head>
   <script>
-  var f = function () { return arguments[0]; }
-  alert(f(12) === 12);
+  var a = () => {};
+  var b = () => { a();};
+  var c = () => { b();};
+  c();
   </script>
 </head>
 <body>
